@@ -5,9 +5,14 @@ in a folder or AssetCatalog, suitable for passing to UIImage(named:).
 
 ## Syntax
 
-	ocimages [--language {swift|objective-c}] <assetCatalogOrFolder>
+	ocimages [--language {swift|objective-c}] [--class-prefix <prefixString>] <assetCatalogOrFolder>
 
 If you do not specify a language, it will default to Swift.
+
+If you provide a prefix string, the generated class name and generated file name(s) will
+have this string stuck on their front. This is useful for Objective-C, where your asset
+catalog might have an un-prefixed name like "Assets" so you can turn it into ULIAssets
+for the constants.
 
 ## Why?
 
@@ -15,11 +20,19 @@ When you write
 
 	let myImage = UIImage(named: "GraceHopper")
 
+or
+
+	UIImage * myImage = [UIImage imageNamed: @"GraceHopper"]
+
 it is easy to mistype the image name and the compiler can't tell you.
 ocimages will auto-generate constants from the actual file names that
 let you write
 
 	let myImage = UIImage(named: Assets.GraceHopper)
+
+resp.
+
+	UIImage * myImage = [UIImage imageNamed: ULIAssetsGraceHopper]
 
 for the same level of readability, but now the compiler knows what the
 image names that exist are, and it can tell you if you mis-type, and
