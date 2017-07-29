@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>TestApp.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>ocimages.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>55D312191F2CEEC000C7F19C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>55D312351F2D0F9500C7F19C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
