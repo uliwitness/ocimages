@@ -13,7 +13,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		let myImage = NSImage(named: Assets.AppIcon)
-		Swift.print("myImage = \(myImage)")
+		Swift.print("image in swift = \(String(describing: myImage))")
+		ObjCTest.testObjCStuff()
 		
 		NSApplication.shared().terminate(self)
 	}

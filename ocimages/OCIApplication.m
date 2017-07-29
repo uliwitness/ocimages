@@ -56,7 +56,7 @@
 							   @"header-postlude": @"",
 							   @"source-postlude": @"",
 							   @"header-constant": @"extern NSString * const %1$@%2$@;\n",
-							   @"source-constant": @"NSString * const %1$@%2$@ = %3$@;\n"
+							   @"source-constant": @"NSString * const %1$@%2$@ = @%3$@;\n"
 							   },
 					   @"swift": @{
 							   @"source-filename-suffix": @".swift",

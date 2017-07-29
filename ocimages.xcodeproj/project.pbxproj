@@ -14,6 +14,8 @@
 		55D3123D1F2D0F9500C7F19C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55D3123C1F2D0F9500C7F19C /* Assets.xcassets */; };
 		55D312401F2D0F9500C7F19C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D3123E1F2D0F9500C7F19C /* Main.storyboard */; };
 		55D312491F2D10F600C7F19C /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D312481F2D10F600C7F19C /* Assets.swift */; };
+		55D3124D1F2D16FF00C7F19C /* ULIAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D3124C1F2D16FF00C7F19C /* ULIAssets.m */; };
+		55D312501F2D172400C7F19C /* ObjCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D3124F1F2D172400C7F19C /* ObjCTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,11 @@
 		55D3123F1F2D0F9500C7F19C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55D312411F2D0F9500C7F19C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55D312481F2D10F600C7F19C /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = BUILT_PRODUCTS_DIR; };
+		55D3124A1F2D16FE00C7F19C /* TestApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		55D3124B1F2D16FF00C7F19C /* ULIAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ULIAssets.h; path = "../../../Library/Developer/Xcode/DerivedData/ocimages-fshhdshhnxgciogslzcrlkctdncx/Build/Products/Debug/ULIAssets.h"; sourceTree = "<group>"; };
+		55D3124C1F2D16FF00C7F19C /* ULIAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ULIAssets.m; path = "../../../Library/Developer/Xcode/DerivedData/ocimages-fshhdshhnxgciogslzcrlkctdncx/Build/Products/Debug/ULIAssets.m"; sourceTree = "<group>"; };
+		55D3124E1F2D172400C7F19C /* ObjCTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCTest.h; sourceTree = "<group>"; };
+		55D3124F1F2D172400C7F19C /* ObjCTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,10 +123,15 @@
 			isa = PBXGroup;
 			children = (
 				55D312381F2D0F9500C7F19C /* AppDelegate.swift */,
+				55D3124E1F2D172400C7F19C /* ObjCTest.h */,
+				55D3124F1F2D172400C7F19C /* ObjCTest.m */,
 				55D312481F2D10F600C7F19C /* Assets.swift */,
+				55D3124B1F2D16FF00C7F19C /* ULIAssets.h */,
+				55D3124C1F2D16FF00C7F19C /* ULIAssets.m */,
 				55D3123C1F2D0F9500C7F19C /* Assets.xcassets */,
 				55D3123E1F2D0F9500C7F19C /* Main.storyboard */,
 				55D312411F2D0F9500C7F19C /* Info.plist */,
+				55D3124A1F2D16FE00C7F19C /* TestApp-Bridging-Header.h */,
 			);
 			path = TestApp;
 			sourceTree = "<group>";
@@ -181,6 +193,7 @@
 					55D312351F2D0F9500C7F19C = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = RCKXACKVZS;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -228,7 +241,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "PREVIOUS_DIR=`pwd`\ncd ${BUILT_PRODUCTS_DIR}\n${BUILT_PRODUCTS_DIR}/ocimages ${PROJECT_DIR}/TestApp/Assets.xcassets\ncd ${PREVIOUS_DIR}";
+			shellScript = "PREVIOUS_DIR=`pwd`\ncd ${BUILT_PRODUCTS_DIR}\n${BUILT_PRODUCTS_DIR}/ocimages ${PROJECT_DIR}/TestApp/Assets.xcassets\n${BUILT_PRODUCTS_DIR}/ocimages --language objective-c --class-prefix ULI ${PROJECT_DIR}/TestApp/Assets.xcassets\ncd ${PREVIOUS_DIR}";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -248,7 +261,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				55D312491F2D10F600C7F19C /* Assets.swift in Sources */,
+				55D3124D1F2D16FF00C7F19C /* ULIAssets.m in Sources */,
 				55D312391F2D0F9500C7F19C /* AppDelegate.swift in Sources */,
+				55D312501F2D172400C7F19C /* ObjCTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = RCKXACKVZS;
 				INFOPLIST_FILE = TestApp/Info.plist;
@@ -390,6 +406,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thevoidsoftware.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "TestApp/TestApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -399,12 +416,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = RCKXACKVZS;
 				INFOPLIST_FILE = TestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thevoidsoftware.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestApp/TestApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
@@ -438,6 +457,7 @@
 				55D312431F2D0F9500C7F19C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
