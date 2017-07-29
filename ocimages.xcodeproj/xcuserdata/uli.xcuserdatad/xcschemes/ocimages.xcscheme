@@ -67,6 +67,10 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
+            argument = "--language objective-c"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
             argument = "/Users/uli/Programming/ocstrings/TestApp/Assets.xcassets"
             isEnabled = "YES">
          </CommandLineArgument>
