@@ -6,12 +6,9 @@
 //  Copyright © 2017 Uli Kusterer. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "OCIApplication.h"
+
 
 int main(int argc, const char * argv[]) {
-	@autoreleasepool {
-	    // insert code here...
-	    NSLog(@"Hello, World!");
-	}
-	return 0;
+	return ULICommandLineApplicationMain( [OCIApplication class], argc, argv);
 }
