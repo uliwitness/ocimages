@@ -31,6 +31,7 @@
 		55D312251F2CEED800C7F19C /* ULICommandLineApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULICommandLineApplication.m; sourceTree = "<group>"; };
 		55D312281F2CEF3600C7F19C /* OCIApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCIApplication.h; sourceTree = "<group>"; };
 		55D312291F2CEF3600C7F19C /* OCIApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCIApplication.m; sourceTree = "<group>"; };
+		55D3122D1F2D027700C7F19C /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +48,7 @@
 		55D312111F2CEEC000C7F19C = {
 			isa = PBXGroup;
 			children = (
+				55D3122D1F2D027700C7F19C /* Readme.md */,
 				55D3121C1F2CEEC000C7F19C /* ocimages */,
 				55D312271F2CEF0400C7F19C /* Support Files */,
 				55D3121B1F2CEEC000C7F19C /* Products */,
@@ -272,6 +274,7 @@
 				55D312231F2CEEC000C7F19C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
